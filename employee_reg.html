@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +69,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Employee Registration</h1>
@@ -104,5 +106,27 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <script>
+        const form = document.querySelector("#registration-form")
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+
+            const lastName = form.querySelector("#last_name").value
+            const firstName = form.querySelector("#first_name").value
+            const middleName = form.querySelector("#middle_name").value
+            const birthdate = form.querySelector("#birthdate").value
+            const department = form.querySelector("#department").value
+            const office = form.querySelector("#office").value
+
+            console.log(`Last Name: ${lastName}`)
+            console.log(`First Name: ${firstName}`)
+            console.log(`Middle Name: ${middleName}`)
+            console.log(`Birthdate: ${birthdate}`)
+            console.log(`Department: ${department}`)
+            console.log(`Office: ${office}`)
+        })
+    </script>
 </body>
+
 </html>
